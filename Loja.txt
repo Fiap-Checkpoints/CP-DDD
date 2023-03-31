@@ -1,0 +1,65 @@
+Integrantes:
+
+João Dubas Rm76153
+
+
+Objetivo:
+Criar um sistema para uma loja que utilize 5 classes, uma para Funcionarios, Produtos, Cliente, Delivery e Carrinho
+
+---------------------------------------------------------------------------------------
+		Funcionario:
+id : int
+nome : String
+salario : Double
+cargo : String
+
+		Metodos:
+Aumento(double : double) : void
+ -O metodo aplica um aumento no salario com base numa %
+
+---------------------------------------------------------------------------------------
+		Produto:
+id : int
+nome : string
+precoCusto : double
+precoVenda : double
+quantidade : int
+
+		Metodos:
+calcularLucro() : double
+ -Calcula qual o lucro na venda, com base no custo que a loja teve
+
+---------------------------------------------------------------------------------------
+		Carrinho:
+id : int
+total : double
+items : String
+quantidade : int
+
+		Metodos:
+AdicionarItem(String : String, double : double) : void
+ -Monta uma string adicionando todos os produtos e o total
+
+---------------------------------------------------------------------------------------
+		Cliente:
+id : int
+nome : String
+cpf : String
+cupom : double
+
+		Metodos:
+DarCupom(double : double) : void
+ -Da um cupom para o cliente poder usar
+
+---------------------------------------------------------------------------------------
+		Delivery:
+id : int
+carrinho : carrinho
+cliente : cliente
+endereço : String
+
+		Metodos:
+AplicarCupom() : void
+ -Caso o cliente possua um cupom, sera aplicado no total da compra
+
+---------------------------------------------------------------------------------------
