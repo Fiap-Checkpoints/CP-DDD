@@ -2,6 +2,7 @@ package br.com.fiap.padaria.main;
 import br.com.fiap.padaria.model.*;
 import java.util.Scanner;
 import java.util.Random;
+import java.util.ArrayList;
 
 public class Main {
 

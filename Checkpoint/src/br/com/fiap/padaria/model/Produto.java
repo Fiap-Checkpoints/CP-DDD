@@ -1,13 +1,20 @@
 package br.com.fiap.padaria.model;
+import java.util.ArrayList;
 
 public class Produto {
 
 	
-	int id, quantidade;
+	int id;
 	
 	String nome;
 	
-	double precoCusto, precoVenda;
+	ArrayList<Double> precoCusto = new ArrayList<Double>();
+	
+	ArrayList<Double> precoVenda = new ArrayList<Double>();
+	
+	ArrayList<Integer> quantidade = new ArrayList<Integer>();
+	
+	
 	
 	//getter and setters
 
@@ -19,14 +26,6 @@ public class Produto {
 		this.id = id;
 	}
 
-	public int getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
-
 	public String getNome() {
 		return nome;
 	}
@@ -35,29 +34,37 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public double getPrecoCusto() {
+	public ArrayList<Double> getPrecoCusto() {
 		return precoCusto;
 	}
 
-	public void setPrecoCusto(double precoCusto) {
+	public void setPrecoCusto(ArrayList<Double> precoCusto) {
 		this.precoCusto = precoCusto;
 	}
 
-	public double getPrecoVenda() {
+	public ArrayList<Double> getPrecoVenda() {
 		return precoVenda;
 	}
 
-	public void setPrecoVenda(double precoVenda) {
+	public void setPrecoVenda(ArrayList<Double> precoVenda) {
 		this.precoVenda = precoVenda;
 	}
+
+	public ArrayList<Integer> getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(ArrayList<Integer> quantidade) {
+		this.quantidade = quantidade;
+	}
+
 	
 	
 	//Metodos
-	
-	public double calcularLucro() {
+	public double calcularLucro(int posicao) {
 		double lucro;
 		
-		lucro = precoVenda - precoCusto;
+		lucro = precoVenda.get(posicao) - precoCusto.get(posicao);
 		
 		return lucro;	
 	}
