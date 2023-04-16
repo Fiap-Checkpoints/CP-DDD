@@ -3,11 +3,16 @@ package br.com.fiap.padaria.model;
 public class Produto {
 
 	
-	int id, quantidade;
+	private int id;
 	
-	String nome;
+	private String nome;
 	
-	double precoCusto, precoVenda;
+	private double precoCusto, precoVenda;
+	
+	
+	private int quantidade;
+	
+	
 	
 	//getter and setters
 
@@ -19,14 +24,6 @@ public class Produto {
 		this.id = id;
 	}
 
-	public int getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
-
 	public String getNome() {
 		return nome;
 	}
@@ -34,7 +31,8 @@ public class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
+	
+	
 	public double getPrecoCusto() {
 		return precoCusto;
 	}
@@ -50,10 +48,16 @@ public class Produto {
 	public void setPrecoVenda(double precoVenda) {
 		this.precoVenda = precoVenda;
 	}
-	
-	
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
 	//Metodos
-	
 	public double calcularLucro() {
 		double lucro;
 		

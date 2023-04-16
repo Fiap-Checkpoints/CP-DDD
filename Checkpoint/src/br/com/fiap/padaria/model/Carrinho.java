@@ -2,11 +2,11 @@ package br.com.fiap.padaria.model;
 
 public class Carrinho {
 
-	int id, quantidade;
+	private int id, quantidade;
 	
-	double total;
+	private double total;
 	
-	String items;
+	private String items = "";
 	
 	
 	//getter and setters
