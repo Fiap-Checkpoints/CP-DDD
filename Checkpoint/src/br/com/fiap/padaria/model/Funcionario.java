@@ -2,11 +2,11 @@ package br.com.fiap.padaria.model;
 
 public class Funcionario {
 
-	int id;
+	private int id;
 	
-	String nome, cargo;
+	private String nome, cargo;
 	
-	double salario;
+	private double salario;
 	
 	//getter and setters:
 	

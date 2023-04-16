@@ -2,11 +2,11 @@ package br.com.fiap.padaria.model;
 
 public class Cliente {
 
-	int id;
+	private int id;
 	
-	double cupom;
+	private double cupom;
 	
-	String cpf, nome;
+	private String cpf, nome;
 
 	
 	//getter and setters

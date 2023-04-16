@@ -2,11 +2,11 @@ package br.com.fiap.padaria.model;
 
 public class Delivery {
 
-	int id;
+	private int id;
 	
-	Carrinho carrinho;
+	private Carrinho carrinho;
 	
-	Cliente cliente;
+	private Cliente cliente;
 
 	public int getId() {
 		return id;
@@ -35,7 +35,7 @@ public class Delivery {
 	
 	public void aplicarCupom() {
 		
-		carrinho.total = carrinho.total * cliente.cupom;
+		carrinho.setTotal(carrinho.getTotal() * cliente.getCupom());
 	}
 	
 }

@@ -1,18 +1,16 @@
 package br.com.fiap.padaria.model;
-import java.util.ArrayList;
 
 public class Produto {
 
 	
-	int id;
+	private int id;
 	
-	String nome;
+	private String nome;
 	
-	ArrayList<Double> precoCusto = new ArrayList<Double>();
+	private double precoCusto, precoVenda;
 	
-	ArrayList<Double> precoVenda = new ArrayList<Double>();
 	
-	ArrayList<Integer> quantidade = new ArrayList<Integer>();
+	private int quantidade;
 	
 	
 	
@@ -33,38 +31,37 @@ public class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public ArrayList<Double> getPrecoCusto() {
+	
+	
+	public double getPrecoCusto() {
 		return precoCusto;
 	}
 
-	public void setPrecoCusto(ArrayList<Double> precoCusto) {
+	public void setPrecoCusto(double precoCusto) {
 		this.precoCusto = precoCusto;
 	}
 
-	public ArrayList<Double> getPrecoVenda() {
+	public double getPrecoVenda() {
 		return precoVenda;
 	}
 
-	public void setPrecoVenda(ArrayList<Double> precoVenda) {
+	public void setPrecoVenda(double precoVenda) {
 		this.precoVenda = precoVenda;
 	}
 
-	public ArrayList<Integer> getQuantidade() {
+	public int getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(ArrayList<Integer> quantidade) {
+	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
 
-	
-	
 	//Metodos
-	public double calcularLucro(int posicao) {
+	public double calcularLucro() {
 		double lucro;
 		
-		lucro = precoVenda.get(posicao) - precoCusto.get(posicao);
+		lucro = precoVenda - precoCusto;
 		
 		return lucro;	
 	}
